@@ -84,8 +84,7 @@ namespace irf_project_t4z1x
 				this.Nem = "Férfi";
 			else if (newNem.ToString() == "Nő")
 				this.Nem = "Nő";
-			else
-				System.Windows.Forms.MessageBox.Show("Rossz adatot adott meg");
+			
 		}
 
 		public string GetNem()
