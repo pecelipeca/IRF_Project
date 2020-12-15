@@ -573,5 +573,54 @@ namespace irf_project_t4z1x
             Form3 TantargyakKezeles = new Form3(HallgatoiAdatbazis, TantargyAdatbazis, HallgatokListaja, TantargyakListaja);
             TantargyakKezeles.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            CreateExcel();
+        }
+        Excel.Application xlApp;
+        Excel.Workbook xlWB;
+        Excel.Worksheet xlSheet;
+
+        public void CreateExcel()
+        {
+            try
+            {
+                xlApp = new Excel.Application();
+                xlWB = xlApp.Workbooks.Add(Missing.Value);
+                xlApp.Visible = true;
+                xlSheet = xlWB.ActiveSheet;
+
+                CreateTable();
+
+                 xlApp.UserControl = true;
+            }
+            catch (Exception ex)
+            {
+                string errMsg = string.Format("Error: {0}\nLine: {1}", ex.Message, ex.Source);
+                MessageBox.Show(errMsg, "Error");
+
+                xlWB.Close(false, Type.Missing, Type.Missing);
+                xlApp.Quit();
+                xlWB = null;
+                xlApp = null;
+            }
+        }
+
+        public void CreateTable()
+        {
+            //xlSheet.Cells[1, 1] = "";
+            string[] kiirandoSorok = richTextBox1.Text.Split('\n');
+            for (int i = 0; i < kiirandoSorok.Length - 1; ++i)
+            {
+                string[] mezok = kiirandoSorok[i].Split('\t');
+                for (int j = 0; j < mezok.Length - 1; ++j)
+                {
+                    xlSheet.Cells[i + 2, j + 2] = mezok[j];
+                }
+            }
+
+        }
+
     }
 }
