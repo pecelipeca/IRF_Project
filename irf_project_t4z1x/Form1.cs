@@ -143,6 +143,17 @@ namespace irf_project_t4z1x
                 validHallgatoiAdat = true;
             if (tantargyAdat[1] != "-")
                 validTantargyAdat = true;
+
+            label10.Visible = label7.Visible = label8.Visible = label9.Visible = richTextBox1.Visible = comboBox1.Visible = comboBox2.Visible = comboBox3.Visible = button5.Visible = comboBox4.Visible = comboBox5.Visible = comboBox6.Visible = false;
+            label7.Text = "Rendezés 1 rendje";
+            label8.Text = "Rendezés 2 rendje";
+            label9.Text = "Rendezés 3 rendje";
+            label10.Text = "Végeredmény";
+            button5.Text = "Szűrés";
+            comboBox5.Size = comboBox6.Size = comboBox4.Size;
+
+            button6.Text = "Mentés EXCELBE";
+            button6.Visible = false;
         }
     }
 }
