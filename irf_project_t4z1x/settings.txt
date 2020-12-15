@@ -1,0 +1,2 @@
+HallgatosAdatbazisa;..\\..\\HallagatokCSV.txt
+TantargyakAdatbazisa;..\\..\\TantargyakCSV.txt

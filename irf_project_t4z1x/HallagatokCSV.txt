@@ -1,0 +1,6 @@
+LKSOJG,Vez,Kerezst,Apéja neve,Férfi,Bp,233463465,3,-1,0,False,1989. 07. 14.:E5H6J4,3|E5H6J4,3|E5H6J4,3|;
+k,dsfsag,jkmhj,hf gheth,Nő,lrzjt,wrergh b,-1,-1,0,False,2020. 12. 14.:;
+f,jwrjh,gfdffd,hgfsdfh,Férfi,thetrh,fgdgre,4,-1,0,False,2020. 12. 13.:E5H6J4,4|;
+d,JGF,JZJF,HJSFGFH,Nő,TJKULL,ETHRH,4,-1,0,True,2020. 12. 14.:E5H6J4,4|E5H6J4,4|E5H6J4,4|;
+c,dsfgdsg,hdfhdf,gfdg,Nő,dsfas,wgw,-1,-1,0,False,2020. 12. 24.:;
+b,dsfgdsg,hdfhdf,gfdg,Nő,dsfas,wgw,-1,-1,0,False,2020. 12. 24.:;
