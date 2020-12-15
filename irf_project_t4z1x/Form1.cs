@@ -146,7 +146,40 @@ namespace irf_project_t4z1x
             if (tantargyAdat[1] != "-")
                 validTantargyAdat = true;
 
+            button1.Location = new Point(button1.Location.X, label1.Location.Y);
+            label3.Location = new Point(label3.Location.X, label1.Location.Y);
+            label5.Location = new Point(label5.Location.X, label1.Location.Y);
+            checkBox1.Location = new Point(checkBox1.Location.X, label1.Location.Y);
+
+            button4.Location = new Point(button1.Location.X, label2.Location.Y);
+            label4.Location = new Point(label3.Location.X, label2.Location.Y);
+            label6.Location = new Point(label5.Location.X, label2.Location.Y);
+            checkBox2.Location = new Point(checkBox1.Location.X, label2.Location.Y);
+
             label10.Visible = label7.Visible = label8.Visible = label9.Visible = richTextBox1.Visible = comboBox1.Visible = comboBox2.Visible = comboBox3.Visible = button5.Visible = comboBox4.Visible = comboBox5.Visible = comboBox6.Visible = false;
+            label11.Visible = label12.Visible = label13.Visible = label14.Visible = label15.Visible = label16.Visible = label17.Visible = label18.Visible = label19.Visible = label20.Visible = label21.Visible = label22.Visible = false;
+            checkBox3.Visible = checkBox4.Visible = checkBox5.Visible = checkBox6.Visible = checkBox7.Visible = checkBox8.Visible = checkBox9.Visible = checkBox10.Visible = checkBox11.Visible = checkBox12.Visible = checkBox13.Visible = checkBox14.Visible = false;
+            checkBox3.Text = ""; checkBox4.Text = ""; checkBox5.Text = ""; checkBox6.Text = ""; checkBox7.Text = ""; checkBox8.Text = ""; checkBox9.Text = ""; checkBox10.Text = ""; checkBox11.Text = ""; checkBox12.Text = ""; checkBox13.Text = ""; checkBox14.Text = "";
+            label11.Text = ""; label12.Text = ""; label13.Text = ""; label14.Text = ""; label15.Text = ""; label16.Text = ""; label17.Text = ""; label18.Text = ""; label19.Text = ""; label20.Text = ""; label21.Text = ""; label22.Text = "";
+
+            int chboff = 150;
+            int lbloff = 30;
+
+            label12.Location = new Point(label11.Location.X, label11.Location.Y + 30); label13.Location = new Point(label12.Location.X, label12.Location.Y + 30);
+            checkBox3.Location = new Point(label11.Location.X + chboff, label11.Location.Y); checkBox4.Location = new Point(label12.Location.X + chboff, label12.Location.Y); checkBox5.Location = new Point(label13.Location.X + chboff, label13.Location.Y);
+
+            label14.Location = new Point(checkBox3.Location.X + lbloff, label11.Location.Y); label15.Location = new Point(checkBox4.Location.X + lbloff, label12.Location.Y); label16.Location = new Point(checkBox5.Location.X + lbloff, label13.Location.Y);
+            checkBox6.Location = new Point(label14.Location.X + chboff, label11.Location.Y); checkBox7.Location = new Point(label15.Location.X + chboff, label12.Location.Y); checkBox8.Location = new Point(label16.Location.X + chboff, label13.Location.Y);
+
+            label17.Location = new Point(checkBox6.Location.X + lbloff, label11.Location.Y); label18.Location = new Point(checkBox7.Location.X + lbloff, label12.Location.Y); label19.Location = new Point(checkBox8.Location.X + lbloff, label13.Location.Y);
+            checkBox9.Location = new Point(label17.Location.X + chboff, label11.Location.Y); checkBox10.Location = new Point(label18.Location.X + chboff, label12.Location.Y); checkBox11.Location = new Point(label19.Location.X + chboff, label13.Location.Y);
+
+            label20.Location = new Point(checkBox9.Location.X + lbloff, label11.Location.Y); label21.Location = new Point(checkBox10.Location.X + lbloff, label12.Location.Y); label22.Location = new Point(checkBox11.Location.X + lbloff, label13.Location.Y);
+            checkBox12.Location = new Point(label20.Location.X + chboff, label11.Location.Y); checkBox13.Location = new Point(label21.Location.X + chboff, label12.Location.Y); checkBox14.Location = new Point(label22.Location.X + chboff, label13.Location.Y);
+
+            comboBox1.Location = new Point(label7.Location.X + 120, label7.Location.Y); comboBox4.Location = new Point(comboBox1.Location.X + 120, comboBox1.Location.Y);
+            label8.Location = new Point(label7.Location.X, label7.Location.Y + 30); comboBox2.Location = new Point(label8.Location.X + 120, label8.Location.Y); comboBox5.Location = new Point(comboBox2.Location.X + 120, comboBox2.Location.Y);
+            label9.Location = new Point(label8.Location.X, label8.Location.Y + 30); comboBox3.Location = new Point(label9.Location.X + 120, label9.Location.Y); comboBox6.Location = new Point(comboBox3.Location.X + 120, comboBox3.Location.Y);
             label7.Text = "Rendezés 1 rendje";
             label8.Text = "Rendezés 2 rendje";
             label9.Text = "Rendezés 3 rendje";
@@ -340,6 +373,23 @@ namespace irf_project_t4z1x
             TantargyAdatbazis = new FileStream(label4.Text, FileMode.Create);
             for (int i = 0; i < TantargyakListaja.Count; ++i)
                 TantargyakListaja[i].exportToCSV(TantargyAdatbazis);
+        }
+
+        FileNotFoundException k;
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+
+                HallgatoiAdatbázisFrissites();
+                TantargyAdatbázisFrissitese();
+                TantargyAdatbazis.Close();
+                HallgatoiAdatbazis.Close();
+                HallgatokListaja.Clear();
+                TantargyakListaja.Clear();
+            }
+            catch (FileNotFoundException k)
+            { }
         }
     }
 }

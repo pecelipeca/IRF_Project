@@ -442,7 +442,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(407, 260);
+            this.richTextBox1.Location = new System.Drawing.Point(398, 25);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(840, 481);
             this.richTextBox1.TabIndex = 66;
@@ -638,6 +638,7 @@
             this.Controls.Add(this.button2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
