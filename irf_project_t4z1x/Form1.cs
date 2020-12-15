@@ -561,5 +561,17 @@ namespace irf_project_t4z1x
         {
             comobox3Refresh = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 HallgatoGeneralas = new Form2(HallgatoiAdatbazis, TantargyAdatbazis, HallgatokListaja, TantargyakListaja);
+            HallgatoGeneralas.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 TantargyakKezeles = new Form3(HallgatoiAdatbazis, TantargyAdatbazis, HallgatokListaja, TantargyakListaja);
+            TantargyakKezeles.Show();
+        }
     }
 }
