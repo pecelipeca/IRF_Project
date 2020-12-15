@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace irf_project_t4z1x
 {
-    class Tantargy
+    public class Tantargy
     {
 		public String Nev;
 		//public List<Hallgato> TargyHallgatoi; a hallgatoknal mar ugy is fel van veve eleg arra szurni legyenek a hallgatok a kitüntettek 

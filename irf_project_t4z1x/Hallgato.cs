@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace irf_project_t4z1x
 {
-    class Hallgato : IComparable
+    public class Hallgato : IComparable
     {
 		public String NeptunKod;
 		public List<Tantargy> HallgatoTargyai;
