@@ -324,5 +324,22 @@ namespace irf_project_t4z1x
             }
 
         }
+
+        private void HallgatoiAdatbázisFrissites()
+        {
+
+            HallgatoiAdatbazis.Close();
+            HallgatoiAdatbazis = new FileStream(label3.Text, FileMode.Create);
+            for (int i = 0; i < HallgatokListaja.Count; ++i)
+                HallgatokListaja[i].exportToCSV(HallgatoiAdatbazis);
+        }
+
+        private void TantargyAdatbázisFrissitese()
+        {
+            TantargyAdatbazis.Close();
+            TantargyAdatbazis = new FileStream(label4.Text, FileMode.Create);
+            for (int i = 0; i < TantargyakListaja.Count; ++i)
+                TantargyakListaja[i].exportToCSV(TantargyAdatbazis);
+        }
     }
 }
