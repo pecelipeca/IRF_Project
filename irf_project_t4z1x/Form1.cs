@@ -111,6 +111,8 @@ namespace irf_project_t4z1x
             label4.Text = "";
             button1.Visible = true;
             button4.Visible = true;
+            checkBox1.Visible = true;
+            checkBox2.Visible = true;
             SettingsRead = new StreamReader("..\\..\\settings.txt"); //a settings txt helye 
 
             String settingHallgato = SettingsRead.ReadLine();
@@ -156,7 +158,22 @@ namespace irf_project_t4z1x
             button6.Visible = false;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        bool comobox2Refresh = true;
+        bool comobox3Refresh = true;
+
+        private void button1_Click(object sender, EventArgs e)
+        {//uj hallgatoi adatbazis betoltese
+            openFileDialog1.ShowDialog();
+            label3.Text = openFileDialog1.FileName;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {//uj tantargy adatbazis megadasa
+            openFileDialog2.ShowDialog();
+            label4.Text = openFileDialog2.FileName;
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             if (validHallgatoiAdat && !programStarted)
             {
@@ -306,20 +323,6 @@ namespace irf_project_t4z1x
                 comobox3Refresh = false;
             }
 
-        }
-        bool comobox2Refresh = true;
-        bool comobox3Refresh = true;
-
-        private void button1_Click(object sender, EventArgs e)
-        {//uj hallgatoi adatbazis betoltese
-            openFileDialog1.ShowDialog();
-            label3.Text = openFileDialog1.FileName;
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {//uj tantargy adatbazis megadasa
-            openFileDialog2.ShowDialog();
-            label4.Text = openFileDialog2.FileName;
         }
     }
 }
