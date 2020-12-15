@@ -391,5 +391,53 @@ namespace irf_project_t4z1x
             catch (FileNotFoundException k)
             { }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            List<int> feltetelek = new List<int>();
+            // feltetel lista feltöltese
+            string[] tmp = { "Neptun Kód", "Vezeték Név", "Kreszet Név", "Teljes név", "Anyja Neve", "Nem", "Lakhely", "Oktatási Azonosító", "Oktatási Azonosító", "Átlag", "Teljesített Kredit", "Állami ösztondíjas", "Születési Dátum" };
+            List<string> hallgatoFeltetelk = new List<string>(tmp);
+
+            string[] tmp2 = { "Név", "Kreditérték", "Tantrágy Kód", "Óraszám", "Követelmény" };
+            List<string> tantargyFeltetelek = new List<string>(tmp2);
+            // feltetek 105150
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                feltetelek.Add(comboBox1.SelectedIndex);
+
+                feltetelek.Add(hallgatoFeltetelk.IndexOf(comboBox2.SelectedItem.ToString()));
+                feltetelek.Add(comboBox5.SelectedIndex);
+                if (comboBox3.SelectedItem.ToString() != "None")
+                {
+                    feltetelek.Add(hallgatoFeltetelk.IndexOf(comboBox3.SelectedItem.ToString()));
+                    feltetelek.Add(comboBox6.SelectedIndex);
+                }
+                else
+                {
+                    feltetelek.Add(-1);
+                    feltetelek.Add(-1);
+                }
+            }
+            else
+            {
+                feltetelek.Add(comboBox1.SelectedIndex);
+
+                feltetelek.Add(tantargyFeltetelek.IndexOf(comboBox2.SelectedItem.ToString()));
+                feltetelek.Add(comboBox5.SelectedIndex);
+                if (comboBox3.SelectedItem.ToString() != "None")
+                {
+                    feltetelek.Add(tantargyFeltetelek.IndexOf(comboBox3.SelectedItem.ToString()));
+                    feltetelek.Add(comboBox6.SelectedIndex);
+                }
+                else
+                {
+                    feltetelek.Add(-1);
+                    feltetelek.Add(-1);
+                }
+            }
+        }
     }
 }
