@@ -70,6 +70,25 @@ namespace irf_project_t4z1x
             }
         }
 
+        public void TantargyAdatbazisBetoltese()
+        {
+            TantargyAdatbazis.Position = 0;
+            StreamReader sr = new StreamReader(TantargyAdatbazis);
+            string sor;
+
+            while ((sor = sr.ReadLine()) != null)
+            {
+                Tantargy betolt = new Tantargy();
+                string[] sordata = sor.Split(';')[0].Split(',');
+                betolt.Nev = sordata[0];
+                betolt.SetKreditErtek(Convert.ToInt32(sordata[1]));
+                betolt.SetTargykod(sordata[2]);
+                betolt.SetKovetelmeny(sordata[3]);
+                betolt.SetOraszam(Convert.ToInt32(sordata[4]));
+                TantargyakListaja.Add(betolt);
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
