@@ -4,3 +4,4 @@ tantargy3,4,TKKD3,Vizsga,24;
 Tantargy1,4,E5H6J4,Vizsga,55;
 Tantragy2,5,KOD2,Vizsga,24;
 Tantargy4,6,TKTKKD4,Félévközi,14;
+IRF,5,irf1234,Félévközi,12;
