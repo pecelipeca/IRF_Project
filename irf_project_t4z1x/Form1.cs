@@ -194,6 +194,8 @@ namespace irf_project_t4z1x
         bool comobox2Refresh = true;
         bool comobox3Refresh = true;
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {//uj hallgatoi adatbazis betoltese
             openFileDialog1.ShowDialog();
@@ -396,13 +398,12 @@ namespace irf_project_t4z1x
         {
             richTextBox1.Clear();
             List<int> feltetelek = new List<int>();
-            // feltetel lista feltöltese
+
             string[] tmp = { "Neptun Kód", "Vezeték Név", "Kreszet Név", "Teljes név", "Anyja Neve", "Nem", "Lakhely", "Oktatási Azonosító", "Oktatási Azonosító", "Átlag", "Teljesített Kredit", "Állami ösztondíjas", "Születési Dátum" };
             List<string> hallgatoFeltetelk = new List<string>(tmp);
 
             string[] tmp2 = { "Név", "Kreditérték", "Tantrágy Kód", "Óraszám", "Követelmény" };
             List<string> tantargyFeltetelek = new List<string>(tmp2);
-            // feltetek 105150
 
             if (comboBox1.SelectedIndex == 0)
             {
@@ -438,6 +439,127 @@ namespace irf_project_t4z1x
                     feltetelek.Add(-1);
                 }
             }
+
+            if (feltetelek[0] == 0) //BUBBLE
+            {
+                //elso parameter szerinti rendezes
+                for (int i = 0; i < HallgatokListaja.Count - 1; ++i)
+                {
+                    for (int j = HallgatokListaja.Count - 1; j > i; --j)
+                    {
+                        Hallgato csere = new Hallgato();
+                        bool cmpr = false;
+                        if ((HallgatokListaja[j].GetParam(feltetelek[1])).CompareTo(HallgatokListaja[j - 1].GetParam(feltetelek[1])) >= 0)
+                            cmpr = true;
+                        else
+                            cmpr = false;
+
+                        if (cmpr && feltetelek[2] == 1)
+                        {//csökkenőben rendezünk 
+                            csere = HallgatokListaja[j];
+                            HallgatokListaja[j] = HallgatokListaja[j - 1];
+                            HallgatokListaja[j - 1] = csere;
+                        }
+                        else if (!cmpr && feltetelek[2] == 0)
+                        {//növekvöben rendezünk
+                            csere = HallgatokListaja[j];
+                            HallgatokListaja[j] = HallgatokListaja[j - 1];
+                            HallgatokListaja[j - 1] = csere;
+                        }
+
+                    }
+                }
+                for (int i = 0; i < HallgatokListaja.Count; ++i)
+                {
+                    string sor = "";
+                    if (checkBox3.Checked)
+                        sor += HallgatokListaja[i].NeptunKod.ToString() + "\t";
+                    if (checkBox4.Checked)
+                        sor += HallgatokListaja[i].GetVezetekNev().ToString() + "\t";
+                    if (checkBox5.Checked)
+                        sor += HallgatokListaja[i].GetKeresztNev().ToString() + "\t";
+                    if (checkBox6.Checked)
+                        sor += HallgatokListaja[i].ToString() + "\t";
+                    if (checkBox7.Checked)
+                        sor += HallgatokListaja[i].GetAnyjaNeve().ToString() + "\t";
+                    if (checkBox8.Checked)
+                        sor += HallgatokListaja[i].GetNem().ToString() + "\t";
+                    if (checkBox9.Checked)
+                        sor += HallgatokListaja[i].GetLakhely().ToString() + "\t";
+                    if (checkBox10.Checked)
+                        sor += HallgatokListaja[i].GetOktatasiAzonosito().ToString() + "\t";
+                    if (checkBox11.Checked)
+                        sor += HallgatokListaja[i].GetAtlag().ToString() + "\t";
+                    if (checkBox12.Checked)
+                        sor += HallgatokListaja[i].GetTeljesitettKredit().ToString() + "\t";
+                    if (checkBox13.Checked)
+                        sor += HallgatokListaja[i].GetAllamiOsztondijas().ToString() + "\t";
+                    if (checkBox14.Checked)
+                        sor += HallgatokListaja[i].GetSzuletesiDatum().ToShortDateString() + "\t";
+
+                    sor += '\n';
+                    richTextBox1.Text += sor;
+
+                }
+
+            }
+            else if (feltetelek[0] == 1)
+            {
+                for (int i = 0; i < TantargyakListaja.Count - 1; ++i)
+                {
+                    for (int j = TantargyakListaja.Count - 1; j > i; --j)
+                    {
+                        Tantargy csere = new Tantargy();
+                        bool cmpr = false;
+                        if ((TantargyakListaja[j].GetParam(feltetelek[1])).CompareTo(TantargyakListaja[j - 1].GetParam(feltetelek[1])) >= 0)
+                            cmpr = true;
+                        else
+                            cmpr = false;
+
+                        if (cmpr && feltetelek[2] == 1)
+                        {
+                            csere = TantargyakListaja[j];
+                            TantargyakListaja[j] = TantargyakListaja[j - 1];
+                            TantargyakListaja[j - 1] = csere;
+                        }
+                        else if (!cmpr && feltetelek[2] == 0)
+                        {
+                            csere = TantargyakListaja[j];
+                            TantargyakListaja[j] = TantargyakListaja[j - 1];
+                            TantargyakListaja[j - 1] = csere;
+                        }
+
+                    }
+                }
+                for (int i = 0; i < TantargyakListaja.Count; ++i)
+                {
+                    string sor = "";
+                    if (checkBox3.Checked)
+                        sor += TantargyakListaja[i].Nev.ToString() + "\t";
+                    if (checkBox4.Checked)
+                        sor += TantargyakListaja[i].GetKreditErtek().ToString() + "\t";
+                    if (checkBox5.Checked)
+                        sor += TantargyakListaja[i].GetTargykod().ToString() + "\t";
+                    if (checkBox6.Checked)
+                        sor += TantargyakListaja[i].GetOraszam().ToString() + "\t";
+                    if (checkBox7.Checked)
+                        sor += TantargyakListaja[i].GetKovetelmeny().ToString() + "\t";
+                    sor += '\n';
+                    richTextBox1.Text += sor;
+
+                }
+
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comobox2Refresh = true;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comobox3Refresh = true;
         }
     }
 }
