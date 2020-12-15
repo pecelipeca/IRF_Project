@@ -593,6 +593,7 @@ namespace irf_project_t4z1x
 
                 CreateTable();
 
+
                  xlApp.UserControl = true;
             }
             catch (Exception ex)
@@ -609,18 +610,23 @@ namespace irf_project_t4z1x
 
         public void CreateTable()
         {
-            //xlSheet.Cells[1, 1] = "";
+
+            string[] headers = new string[] {"A hallgató adatai:"};
+            for (int i = 0; i < headers.Length; i++)
+            {
+                xlSheet.Cells[1, i + 1] = headers[i];
+            }
+
             string[] kiirandoSorok = richTextBox1.Text.Split('\n');
             for (int i = 0; i < kiirandoSorok.Length - 1; ++i)
             {
                 string[] mezok = kiirandoSorok[i].Split('\t');
                 for (int j = 0; j < mezok.Length - 1; ++j)
                 {
-                    xlSheet.Cells[i + 2, j + 2] = mezok[j];
+                    xlSheet.Cells[i + 2, j + 1] = mezok[j];
                 }
             }
-
         }
-
+ 
     }
 }

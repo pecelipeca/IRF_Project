@@ -1,7 +1,7 @@
 b,dsfgdsg,hdfhdf,gfdg,Nő,dsfas,wgw,-1,-1,0,False,2020. 12. 24.:;
 c,dsfgdsg,hdfhdf,gfdg,Nő,dsfas,wgw,-1,-1,0,False,2020. 12. 24.:;
-d,JGF,JZJF,HJSFGFH,Nő,TJKULL,ETHRH,4,-1,0,True,2020. 12. 14.:TKTKKD4,4|TKTKKD4,4|TKTKKD4,4|;
-f,jwrjh,gfdffd,hgfsdfh,Férfi,thetrh,fgdgre,4,-1,0,False,2020. 12. 13.:TKTKKD4,4|;
+d,JGF,JZJF,HJSFGFH,Nő,TJKULL,ETHRH,4,-1,0,True,2020. 12. 14.:irf1234,4|irf1234,4|irf1234,4|;
+f,jwrjh,gfdffd,hgfsdfh,Férfi,thetrh,fgdgre,4,-1,0,False,2020. 12. 13.:irf1234,4|;
 k,dsfsag,jkmhj,hf gheth,Nő,lrzjt,wrergh b,-1,-1,0,False,2020. 12. 14.:;
-LKSOJG,Vez,Kerezst,Apéja neve,Férfi,Bp,233463465,3,-1,0,False,1989. 07. 14.:TKTKKD4,3|TKTKKD4,3|TKTKKD4,3|;
+LKSOJG,Vez,Kerezst,Apéja neve,Férfi,Bp,233463465,3,-1,0,False,1989. 07. 14.:irf1234,3|irf1234,3|irf1234,3|;
 t4z1qx,Péceli,András,Czufor Adrienne,Férfi,Budapest,12345,-1,-1,0,True,1994. 11. 21.:;
