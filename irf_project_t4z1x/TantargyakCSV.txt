@@ -1,6 +1,6 @@
-Tantragy2,5,KOD2,Vizsga,24;
+asdasd,3,asdasdasd,Vizsga,55;
 Tantargy5,4,FJHHFFJ,Vizsga,24;
-Tantargy4,6,TKTKKD4,Félévközi,14;
 tantargy3,4,TKKD3,Vizsga,24;
 Tantargy1,4,E5H6J4,Vizsga,55;
-asdasd,3,asdasdasd,Vizsga,55;
+Tantragy2,5,KOD2,Vizsga,24;
+Tantargy4,6,TKTKKD4,Félévközi,14;
