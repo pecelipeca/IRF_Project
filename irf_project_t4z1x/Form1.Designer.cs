@@ -91,6 +91,7 @@
             this.button6.TabIndex = 102;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
             // 
             // checkBox14
             // 
@@ -101,6 +102,7 @@
             this.checkBox14.TabIndex = 101;
             this.checkBox14.Text = "checkBox14";
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.Visible = false;
             // 
             // label22
             // 
@@ -110,6 +112,7 @@
             this.label22.Size = new System.Drawing.Size(41, 13);
             this.label22.TabIndex = 100;
             this.label22.Text = "label22";
+            this.label22.Visible = false;
             // 
             // checkBox13
             // 
@@ -120,6 +123,7 @@
             this.checkBox13.TabIndex = 99;
             this.checkBox13.Text = "checkBox13";
             this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkBox13.Visible = false;
             // 
             // label21
             // 
@@ -129,6 +133,7 @@
             this.label21.Size = new System.Drawing.Size(41, 13);
             this.label21.TabIndex = 98;
             this.label21.Text = "label21";
+            this.label21.Visible = false;
             // 
             // checkBox12
             // 
@@ -139,6 +144,7 @@
             this.checkBox12.TabIndex = 97;
             this.checkBox12.Text = "checkBox12";
             this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.Visible = false;
             // 
             // label20
             // 
@@ -148,6 +154,7 @@
             this.label20.Size = new System.Drawing.Size(41, 13);
             this.label20.TabIndex = 96;
             this.label20.Text = "label20";
+            this.label20.Visible = false;
             // 
             // checkBox11
             // 
@@ -158,6 +165,7 @@
             this.checkBox11.TabIndex = 95;
             this.checkBox11.Text = "checkBox11";
             this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.Visible = false;
             // 
             // label19
             // 
@@ -167,6 +175,7 @@
             this.label19.Size = new System.Drawing.Size(41, 13);
             this.label19.TabIndex = 94;
             this.label19.Text = "label19";
+            this.label19.Visible = false;
             // 
             // checkBox10
             // 
@@ -177,6 +186,7 @@
             this.checkBox10.TabIndex = 93;
             this.checkBox10.Text = "checkBox10";
             this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.Visible = false;
             // 
             // label18
             // 
@@ -186,6 +196,7 @@
             this.label18.Size = new System.Drawing.Size(41, 13);
             this.label18.TabIndex = 92;
             this.label18.Text = "label18";
+            this.label18.Visible = false;
             // 
             // checkBox9
             // 
@@ -196,6 +207,7 @@
             this.checkBox9.TabIndex = 91;
             this.checkBox9.Text = "checkBox9";
             this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.Visible = false;
             // 
             // label17
             // 
@@ -205,6 +217,7 @@
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 90;
             this.label17.Text = "label17";
+            this.label17.Visible = false;
             // 
             // checkBox8
             // 
@@ -215,6 +228,7 @@
             this.checkBox8.TabIndex = 89;
             this.checkBox8.Text = "checkBox8";
             this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.Visible = false;
             // 
             // label16
             // 
@@ -224,6 +238,7 @@
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 88;
             this.label16.Text = "label16";
+            this.label16.Visible = false;
             // 
             // checkBox7
             // 
@@ -234,6 +249,7 @@
             this.checkBox7.TabIndex = 87;
             this.checkBox7.Text = "checkBox7";
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.Visible = false;
             // 
             // label15
             // 
@@ -243,6 +259,7 @@
             this.label15.Size = new System.Drawing.Size(41, 13);
             this.label15.TabIndex = 86;
             this.label15.Text = "label15";
+            this.label15.Visible = false;
             // 
             // checkBox6
             // 
@@ -253,6 +270,7 @@
             this.checkBox6.TabIndex = 85;
             this.checkBox6.Text = "checkBox6";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.Visible = false;
             // 
             // label14
             // 
@@ -262,6 +280,7 @@
             this.label14.Size = new System.Drawing.Size(41, 13);
             this.label14.TabIndex = 84;
             this.label14.Text = "label14";
+            this.label14.Visible = false;
             // 
             // checkBox5
             // 
@@ -272,6 +291,7 @@
             this.checkBox5.TabIndex = 83;
             this.checkBox5.Text = "checkBox5";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.Visible = false;
             // 
             // label13
             // 
@@ -281,6 +301,7 @@
             this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 82;
             this.label13.Text = "label13";
+            this.label13.Visible = false;
             // 
             // checkBox4
             // 
@@ -291,6 +312,7 @@
             this.checkBox4.TabIndex = 81;
             this.checkBox4.Text = "checkBox4";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.Visible = false;
             // 
             // label12
             // 
@@ -300,6 +322,7 @@
             this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 80;
             this.label12.Text = "label12";
+            this.label12.Visible = false;
             // 
             // checkBox3
             // 
@@ -310,6 +333,7 @@
             this.checkBox3.TabIndex = 79;
             this.checkBox3.Text = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Visible = false;
             // 
             // label11
             // 
@@ -319,6 +343,7 @@
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 78;
             this.label11.Text = "label11";
+            this.label11.Visible = false;
             // 
             // comboBox6
             // 
@@ -327,6 +352,7 @@
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 21);
             this.comboBox6.TabIndex = 77;
+            this.comboBox6.Visible = false;
             // 
             // comboBox5
             // 
@@ -335,6 +361,7 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 76;
+            this.comboBox5.Visible = false;
             // 
             // label10
             // 
@@ -344,6 +371,7 @@
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 74;
             this.label10.Text = "label10";
+            this.label10.Visible = false;
             // 
             // comboBox3
             // 
@@ -352,6 +380,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 73;
+            this.comboBox3.Visible = false;
             // 
             // comboBox2
             // 
@@ -360,6 +389,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 72;
+            this.comboBox2.Visible = false;
             // 
             // comboBox1
             // 
@@ -368,6 +398,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 71;
+            this.comboBox1.Visible = false;
             // 
             // label9
             // 
@@ -377,6 +408,7 @@
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 70;
             this.label9.Text = "label9";
+            this.label9.Visible = false;
             // 
             // label8
             // 
@@ -386,6 +418,7 @@
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 69;
             this.label8.Text = "label8";
+            this.label8.Visible = false;
             // 
             // label7
             // 
@@ -395,6 +428,7 @@
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 68;
             this.label7.Text = "label7";
+            this.label7.Visible = false;
             // 
             // button5
             // 
@@ -404,6 +438,7 @@
             this.button5.TabIndex = 67;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
             // 
             // richTextBox1
             // 
@@ -412,6 +447,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(840, 481);
             this.richTextBox1.TabIndex = 66;
             this.richTextBox1.Text = "";
+            this.richTextBox1.Visible = false;
             // 
             // comboBox4
             // 
@@ -420,6 +456,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(53, 21);
             this.comboBox4.TabIndex = 75;
+            this.comboBox4.Visible = false;
             // 
             // checkBox2
             // 

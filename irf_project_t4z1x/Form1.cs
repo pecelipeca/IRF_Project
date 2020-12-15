@@ -93,7 +93,56 @@ namespace irf_project_t4z1x
         {
             InitializeComponent();
 
+            programStarted = false;
 
+
+            button2.Text = "Új hallagató generálása";
+            button3.Text = "Tantárgyak kezelése";
+
+            HallgatokListaja = new List<Hallgato>();
+            TantargyakListaja = new List<Tantargy>();
+            timer1.Interval = 1;
+            timer1.Enabled = true;
+            button2.Visible = false;
+            button3.Visible = false;
+            label1.Text = "A betöltött hallgatoi adatbázis:";
+            label2.Text = "A betölött tantárgy adatbazis:";
+            label3.Text = "";
+            label4.Text = "";
+            button1.Visible = true;
+            button4.Visible = true;
+            SettingsRead = new StreamReader("..\\..\\settings.txt"); //a settings txt helye 
+
+            String settingHallgato = SettingsRead.ReadLine();
+            String settingsTantargy = SettingsRead.ReadLine();
+
+            string[] hallgatoiAdat = settingHallgato.Split(';');
+            string[] tantargyAdat = settingsTantargy.Split(';');
+
+            label3.Text = hallgatoiAdat[1];
+            label4.Text = tantargyAdat[1];
+
+            checkBox1.Text = "";
+            checkBox2.Text = "";
+            checkBox1.Visible = false;
+            checkBox2.Visible = false;
+
+            button1.Text = "Új adatbazis betoltese";
+            button4.Text = "Új adatbazis betoltese";
+
+            label5.Text = "aktuális adatbazis elfogadása:";
+            label6.Text = "aktuális adatbazis elfogadása:";
+            label5.Visible = false;
+            label6.Visible = false;
+
+
+            validHallgatoiAdat = false;
+            validTantargyAdat = false;
+
+            if (hallgatoiAdat[1] != "-")
+                validHallgatoiAdat = true;
+            if (tantargyAdat[1] != "-")
+                validTantargyAdat = true;
         }
     }
 }
