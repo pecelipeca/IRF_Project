@@ -10,8 +10,6 @@ namespace irf_project_t4z1x
     public class Tantargy
     {
 		public String Nev;
-		//public List<Hallgato> TargyHallgatoi; a hallgatoknal mar ugy is fel van veve eleg arra szurni legyenek a hallgatok a kitüntettek 
-
 
 		private Int32 Kreditertek;
 		private String TargyKod;
@@ -24,9 +22,8 @@ namespace irf_project_t4z1x
 			this.Nev = Nev.ToString();
 			this.Kreditertek = kredit;
 			this.TargyKod = TKod.ToString();
-			this.Kovetelmeny = kov.ToString(); //TODO valiator 
+			this.Kovetelmeny = kov.ToString();
 			this.Oraszam = Oszam;
-			//this.TargyHallgatoi = new List<Hallgato>();
 			this.tantargySorszama = sorsz;
 		}
 
@@ -43,7 +40,7 @@ namespace irf_project_t4z1x
 		{ return this.TargyKod.ToString(); }
 
 		public void SetKovetelmeny(String newKov)
-		{ this.Kovetelmeny = newKov.ToString(); }  //TODO Validator
+		{ this.Kovetelmeny = newKov.ToString(); }
 
 		public string GetKovetelmeny()
 		{ return this.Kovetelmeny.ToString(); }
@@ -54,58 +51,15 @@ namespace irf_project_t4z1x
 		public Int32 GetOraszam()
 		{ return this.Oraszam; }
 
-		/*public void PushBackHallgato(Hallgato newHallgato)
-		{
-			TargyHallgatoi.Add(newHallgato);
-		}*/
-
-		/*
-		public List<Hallgato> GetHallgatokListaja(bool AsACopy = false)
-		{
-			if (AsACopy)
-			{
-				List<Hallgato> returnVal = new List<Hallgato>();
-				for (int i = 0; i < this.TargyHallgatoi.Count; ++i)
-					returnVal.Add(this.TargyHallgatoi[i]);
-				return returnVal;
-
-			}
-			else
-				return this.TargyHallgatoi;
-
-
-		}
-		*/
 		public void exportToCSV(FileStream sf)
 		{
-			/*StreamWriter writer = new StreamWriter(sf);
-			writer.Write(this.Nev.ToString() + "," + this.Kreditertek.ToString() + "," + this.TargyKod.ToString() + "," + this.Kovetelmeny.ToString() + "," + this.Oraszam.ToString());
-			writer.Write(":");
-			for (int i = 0; i < TargyHallgatoi.Count; ++i)
-			{
-				writer.Write(TargyHallgatoi[i].NeptunKod.ToString() + "," ) ;
-
-			}
-			writer.Write(";\n");*/
 			string write1 = this.Nev.ToString() + "," + this.Kreditertek.ToString() + "," + this.TargyKod.ToString() + "," + this.Kovetelmeny.ToString() + "," + this.Oraszam.ToString();
 			byte[] info1 = new UTF8Encoding(true).GetBytes(write1);
 			sf.Write(info1, 0, info1.Length);
 
-			/*string write2 = ":";
-			byte[] info2 = new UTF8Encoding(true).GetBytes(write2);
-			sf.Write(info2, 0, info2.Length);
-			/*for (int i = 0; i < TargyHallgatoi.Count; ++i)
-			{
-				string write3 = TargyHallgatoi[i].NeptunKod.ToString() + "," ;
-				byte[] info3 = new UTF8Encoding(true).GetBytes(write3);
-				sf.Write(info3, 0, info3.Length);
-
-			}*/
 			string write4 = ";\n";
 			byte[] info4 = new UTF8Encoding(true).GetBytes(write4);
 			sf.Write(info4, 0, info4.Length);
-			//MessageBox.Show("Mentés megtörtént");
-
 		}
 
 
@@ -113,7 +67,6 @@ namespace irf_project_t4z1x
 		{
 			Tantargy eq = obj as Tantargy;
 			return this.Nev.Equals(eq.Nev);
-
 		}
 
 		public override int GetHashCode()

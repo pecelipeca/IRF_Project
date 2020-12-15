@@ -155,5 +155,171 @@ namespace irf_project_t4z1x
             button6.Text = "Mentés EXCELBE";
             button6.Visible = false;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (validHallgatoiAdat && !programStarted)
+            {
+                label5.Visible = true;
+                checkBox1.Visible = true;
+            }
+
+            if (validTantargyAdat && !programStarted)
+            {
+                label6.Visible = true;
+                checkBox2.Visible = true;
+            }
+            if ((label3.Text != "-") && !programStarted)
+                validHallgatoiAdat = true;
+            if ((label4.Text != "-") && !programStarted)
+                validTantargyAdat = true;
+            if (richTextBox1.Text.Length > 6)
+                button6.Enabled = true;
+            else
+                button6.Enabled = false;
+
+            if (checkBox1.Checked && checkBox2.Checked && !programStarted)
+            {
+                programStarted = true;
+
+                HallgatoiAdatbazis = new FileStream(label3.Text, FileMode.Open);
+                TantargyAdatbazis = new FileStream(label4.Text, FileMode.Open);
+
+                label1.Visible = false;
+                label2.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                button1.Visible = false;
+                button4.Visible = false;
+                checkBox1.Visible = false;
+                checkBox2.Visible = false;
+
+                button2.Visible = true;
+                button3.Visible = true;
+                label10.Visible = label7.Visible = label8.Visible = label9.Visible = richTextBox1.Visible = comboBox1.Visible = comboBox2.Visible = comboBox3.Visible = button5.Visible = comboBox4.Visible = comboBox5.Visible = comboBox6.Visible = true;
+
+                button6.Visible = true;
+
+                label11.Visible = label12.Visible = label13.Visible = label14.Visible = label15.Visible = label16.Visible = label17.Visible = label18.Visible = label19.Visible = label20.Visible = label21.Visible = label22.Visible = true;
+
+                comboBox1.Items.Add("Hallgato");
+                comboBox1.Items.Add("Tantargy");
+                comboBox1.SelectedIndex = 0;
+
+                comboBox4.Items.Add("Növekvő");
+                comboBox4.Items.Add("Csökkenő");
+                comboBox4.SelectedIndex = 0;
+                comboBox4.Visible = false;
+
+                comboBox5.Items.Add("Növekvő");
+                comboBox5.Items.Add("Csökkenő");
+                comboBox5.SelectedIndex = 0;
+
+                comboBox6.Items.Add("Növekvő");
+                comboBox6.Items.Add("Csökkenő");
+                comboBox6.SelectedIndex = 0;
+
+
+                TantargyAdatbazisBetoltese();
+                HallgatoiAdatbazisBetoltese();
+
+            }
+            if (comboBox1.SelectedIndex == 0 && comobox2Refresh)
+            {
+
+                comboBox2.Items.Clear();
+                comboBox2.Items.Add("Neptun Kód");              //0
+                comboBox2.Items.Add("Vezeték Név");             //1
+                comboBox2.Items.Add("Kreszet Név");             //2
+                comboBox2.Items.Add("Teljes név");              //3
+                comboBox2.Items.Add("Anyja Neve");              //4
+                comboBox2.Items.Add("Nem");                     //5
+                comboBox2.Items.Add("Lakhely");                 //6
+                comboBox2.Items.Add("Oktatási Azonosító");      //7
+                comboBox2.Items.Add("Átlag");                   //8
+                comboBox2.Items.Add("Teljesített Kredit");      //9
+                comboBox2.Items.Add("Állami ösztondíjas");      //10
+                comboBox2.Items.Add("Születési Dátum");         //11
+                comboBox2.SelectedIndex = 0;
+                comobox2Refresh = false;
+
+                label11.Text = ""; label12.Text = ""; label13.Text = ""; label14.Text = ""; label15.Text = ""; label16.Text = ""; label17.Text = ""; label18.Text = ""; label19.Text = ""; label20.Text = ""; label21.Text = ""; label22.Text = "";
+                label11.Text = "Neptun Kód";
+                label12.Text = "Vezetéknév";
+                label13.Text = "Kereszt név";
+                label14.Text = "Teljes név";
+                label15.Text = "Anyja neve";
+                label16.Text = "Nem";
+                label17.Text = "Lakhely";
+                label18.Text = "Oktatási azonosító";
+                label19.Text = "Átlag";
+                label20.Text = "Teljesített kredit";
+                label21.Text = "Állami ösztondíjas";
+                label22.Text = "Születési dátum";
+
+                checkBox3.Visible = checkBox4.Visible = checkBox5.Visible = checkBox6.Visible = checkBox7.Visible = checkBox8.Visible = checkBox9.Visible = checkBox10.Visible = checkBox11.Visible = checkBox12.Visible = checkBox13.Visible = checkBox14.Visible = false;
+                checkBox3.Visible = checkBox4.Visible = checkBox5.Visible = checkBox6.Visible = checkBox7.Visible = checkBox8.Visible = checkBox9.Visible = checkBox10.Visible = checkBox11.Visible = checkBox12.Visible = checkBox13.Visible = checkBox14.Visible = true;
+
+            }
+            else if (comboBox1.SelectedIndex == 1 && comobox2Refresh)
+            {
+
+                comboBox2.Items.Clear();
+                comboBox2.Items.Add("Név");             //0
+                comboBox2.Items.Add("Kreditérték");     //1
+                comboBox2.Items.Add("Tantrágy Kód");    //2
+                comboBox2.Items.Add("Óraszám");         //3
+                comboBox2.Items.Add("Követelmény");     //4
+                comboBox2.SelectedIndex = 0;
+                comobox2Refresh = false;
+
+                label11.Text = ""; label12.Text = ""; label13.Text = ""; label14.Text = ""; label15.Text = ""; label16.Text = ""; label17.Text = ""; label18.Text = ""; label19.Text = ""; label20.Text = ""; label21.Text = ""; label22.Text = "";
+                label11.Text = "Név";
+                label12.Text = "Kreditérték";
+                label13.Text = "Tantárgy kód";
+                label14.Text = "Óraszám";
+                label15.Text = "Követelmény";
+
+                checkBox3.Visible = checkBox4.Visible = checkBox5.Visible = checkBox6.Visible = checkBox7.Visible = checkBox8.Visible = checkBox9.Visible = checkBox10.Visible = checkBox11.Visible = checkBox12.Visible = checkBox13.Visible = checkBox14.Visible = false;
+                checkBox3.Visible = checkBox4.Visible = checkBox5.Visible = checkBox6.Visible = checkBox7.Visible = true;
+            }
+            if (comboBox1.SelectedIndex == 0 && comobox3Refresh)
+            {
+                comboBox3.Items.Clear();
+                for (int i = 0; i < comboBox2.Items.Count; ++i)
+                    if (i != comboBox2.SelectedIndex)
+                        comboBox3.Items.Add(comboBox2.Items[i]);
+                comboBox3.Items.Add("None");
+                comboBox3.SelectedIndex = comboBox3.Items.Count - 1;
+                comobox3Refresh = false;
+            }
+            else if (comboBox1.SelectedIndex == 1 && comobox3Refresh)
+            {
+                comboBox3.Items.Clear();
+                for (int i = 0; i < comboBox2.Items.Count; ++i)
+                    if (i != comboBox2.SelectedIndex)
+                        comboBox3.Items.Add(comboBox2.Items[i]);
+                comboBox3.Items.Add("None");
+                comboBox3.SelectedIndex = comboBox3.Items.Count - 1;
+                comobox3Refresh = false;
+            }
+
+        }
+        bool comobox2Refresh = true;
+        bool comobox3Refresh = true;
+
+        private void button1_Click(object sender, EventArgs e)
+        {//uj hallgatoi adatbazis betoltese
+            openFileDialog1.ShowDialog();
+            label3.Text = openFileDialog1.FileName;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {//uj tantargy adatbazis megadasa
+            openFileDialog2.ShowDialog();
+            label4.Text = openFileDialog2.FileName;
+        }
     }
 }

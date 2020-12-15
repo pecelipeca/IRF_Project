@@ -442,7 +442,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(398, 25);
+            this.richTextBox1.Location = new System.Drawing.Point(398, 23);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(840, 481);
             this.richTextBox1.TabIndex = 66;
@@ -504,6 +504,7 @@
             this.button4.TabIndex = 61;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button1
             // 
@@ -513,6 +514,7 @@
             this.button1.TabIndex = 60;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
