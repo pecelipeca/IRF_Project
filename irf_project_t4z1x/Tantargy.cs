@@ -63,14 +63,14 @@ namespace irf_project_t4z1x
 		}
 
 
-		public override bool Equals(object obj)
+		/*public override bool Equals(object obj)
 		{
 			Tantargy eq = obj as Tantargy;
 			return this.Nev.Equals(eq.Nev);
 		}
 
 		public override int GetHashCode()
-		{ return this.tantargySorszama; }
+		{ return this.tantargySorszama; }*/
 
 		public dynamic GetParam(int k) //https://stackoverflow.com/questions/744401/dynamic-return-type-of-a-function    2. answer
 		{
