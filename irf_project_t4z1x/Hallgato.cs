@@ -194,7 +194,7 @@ namespace irf_project_t4z1x
 			if (masikHallgato != null)
 				return this.NeptunKod.CompareTo(masikHallgato.NeptunKod);
 			else
-				throw new ArgumentException("Háde ez nem is hallgato nem is létezik");
+				throw new ArgumentException("Hát de ez nem is hallgato nem is létezik");
 
 		}
 
